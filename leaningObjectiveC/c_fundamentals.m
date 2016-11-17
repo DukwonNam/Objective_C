@@ -1,12 +1,10 @@
 #import <string.h>
 #import <stdlib.h>
 #import <memory.h>
-#import <malloc.h>
 #import <Foundation/Foundation.h>
 #import <Foundation/NSAutoreleasePool.h>
 
 int test_C_fundamentals() {
-    NSAutoreleasePool *pool = [[NSAutoreleasePool alloc] init];
     NSLog(@"Hello, World!\n");
 
     /*******************************************************
@@ -14,7 +12,7 @@ int test_C_fundamentals() {
         Get length of string
         This needs string.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# strlen(char * src)\n");
         char s[15] = "ABC";
         int l = strlen(s);
@@ -28,7 +26,7 @@ int test_C_fundamentals() {
         Copy strings from the src to target
         This needs string.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# strcpy(char * target, char * src)\n");
         char s2[3];
         strcpy(s2, "Hello world! This is a test text");
@@ -43,7 +41,7 @@ int test_C_fundamentals() {
         Paste string from the src at the end of the target
         This needs string.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# strcat(char * target, char * src)\n");
         char a[3] = "XYZ";
         char b[] = "de";
@@ -66,7 +64,7 @@ int test_C_fundamentals() {
         If result > 0 : b is faster than a lexically
         This needs string.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# strcmp(char * a, char * b)\n");
         char src1[2] = "ABC";
         char src2[2] = "ABCD";
@@ -80,7 +78,7 @@ int test_C_fundamentals() {
         Convert string to int
         This needs stdlib.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# atoi(char * src)\n");
         char str[] = "340";
         int i = atoi(str);
@@ -93,7 +91,7 @@ int test_C_fundamentals() {
         It's like itoa() but itoa() is defined in Visual studio.
         This needs string.h
     */
-    {
+    @autoreleasepool {
         printf("\n\n# sprintf(char * target, \"\%f\", 14.5)\n");
         char str[5];
         sprintf(str, "value: %f", 143.5);
@@ -125,7 +123,7 @@ int test_C_fundamentals() {
         // Result: sprintf to string str=1.435000e+002
     }
     
-    {
+    @autoreleasepool {
         int x, y;
         int a[][3] = {{10, 20, 30},{40, 50, 60}};
         for (y = 0; y < 2; y++) {
@@ -136,7 +134,7 @@ int test_C_fundamentals() {
         }
     }
 
-    {
+    @autoreleasepool {
         char str[] = "Infinite Test!";
         printf("str=%c\n", *(str + 2));
     }
@@ -145,7 +143,7 @@ int test_C_fundamentals() {
         T * name = (T *)malloc(sizeof(T) * size)
         This needs memory.h, malloc.h, stdlib.h
     */
-    {
+    @autoreleasepool {
         char *buf;
         buf = (char *)malloc(sizeof(char) * 2000);
         buf[0] = 'z';
@@ -161,7 +159,7 @@ int test_C_fundamentals() {
     /*******************************************************
         searching for a charactor
     */
-    {
+    @autoreleasepool {
         printf("\n\n# searching for a charactor\n");
         char src[] = "I love car and dog.";
         char key = 'a';
