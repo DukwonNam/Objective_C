@@ -86,7 +86,30 @@ int test_NSObjects() {
     @autoreleasepool {
         const char *s1, *s2 = "EFGH";
         NSString *str1 = @"ABCD", *str2 = @"";
+
+        NSLog(@"%@", str1);
         s1 = [str1 cStringUsingEncoding:NSShiftJISStringEncoding];
+        printf("NSShiftJISStringEncoding: %s\n", s1);
+        s1 = [str1 cStringUsingEncoding:NSUTF8StringEncoding];
+        printf("NSUTF8StringEncoding: %s\n", s1);
+        s1 = [str1 cStringUsingEncoding:NSASCIIStringEncoding];
+        printf("NSASCIIStringEncoding: %s\n", s1);
+        s1 = [str1 cStringUsingEncoding:NSUnicodeStringEncoding];
+        printf("NSUnicodeStringEncoding: %s\n", s1);
+        s1 = [str1 cStringUsingEncoding:NSMacOSRomanStringEncoding];
+        printf("NSMacOSRomanStringEncoding: %s\n", s1);
+
+        printf("%s\n", s2);
+        str2 = [NSString stringWithCString:s2 encoding:NSUTF8StringEncoding];
+        NSLog(@"NSUTF8StringEncoding: %@", str2);
+        str2 = [NSString stringWithCString:s2 encoding:NSShiftJISStringEncoding];
+        NSLog(@"NSShiftJISStringEncoding: %@", str2);
+        str2 = [NSString stringWithCString:s2 encoding:NSASCIIStringEncoding];
+        NSLog(@"NSASCIIStringEncoding: %@", str2);
+        str2 = [NSString stringWithCString:s2 encoding:NSUnicodeStringEncoding];
+        NSLog(@"NSUnicodeStringEncoding: %@", str2);
+        str2 = [NSString stringWithCString:s2 encoding:NSMacOSRomanStringEncoding];
+        NSLog(@"NSMacOSRomanStringEncoding: %@", str2);
     }
 
     system("PAUSE");
