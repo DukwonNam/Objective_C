@@ -77,9 +77,16 @@ int test_NSObjects() {
         char ch[] = "ABCDE";
         NSString *strTest = [[NSString alloc] initWithCString:ch encoding:NSUTF8StringEncoding];
         NSLog(@"strTest alloc + initWithCString is %@", strTest);
+        // NSString stringWithCString: encoding
         NSString *strTest2 = [NSString stringWithCString:ch encoding:NSUTF8StringEncoding];
 //        NSString *strTest2 = [NSString stringWithUTF8String:ch];
         NSLog(@"strTest2 stringWithCString is %@", strTest2);
+    }
+
+    @autoreleasepool {
+        const char *s1, *s2 = "EFGH";
+        NSString *str1 = @"ABCD", *str2 = @"";
+        s1 = [str1 cStringUsingEncoding:NSShiftJISStringEncoding];
     }
 
     system("PAUSE");
