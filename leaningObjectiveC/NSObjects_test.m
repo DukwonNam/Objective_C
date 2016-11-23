@@ -84,6 +84,7 @@ int test_NSObjects() {
     }
 
     @autoreleasepool {
+        // char * <=> NSString * Encoding
         const char *s1, *s2 = "EFGH";
         NSString *str1 = @"ABCD", *str2 = @"";
 
@@ -110,6 +111,27 @@ int test_NSObjects() {
         NSLog(@"NSUnicodeStringEncoding: %@", str2);
         str2 = [NSString stringWithCString:s2 encoding:NSMacOSRomanStringEncoding];
         NSLog(@"NSMacOSRomanStringEncoding: %@", str2);
+    }
+
+    @autoreleasepool {
+        // NSMutableString
+        NSMutableString *str = [NSMutableString stringWithCapacity:500];
+
+        str = [NSMutableString stringWithString:@"ABCDEFG"];
+        NSLog(@"NSMutableString stringWithString: %@", str);
+        str = [NSMutableString stringWithString:@"가나다라마바사"];
+        NSLog(@"NSMutableString stringWithString: %@", str);
+
+        [str appendString:@"ABCDEFG"];
+        NSLog(@"NSMutableString appendString: %@", str);
+
+        // deleteCharactersInRange + NSMakeRange(start position, count of characters)
+        [str deleteCharactersInRange:NSMakeRange(3, 2)];
+        NSLog(@"NSMutableString deleteCharactersInRange: %@", str);
+
+        // insertString + atIndex
+        [str insertString:@"fkak" atIndex:3];
+        NSLog(@"NSMutableString insertString: %@", str);
     }
 
     system("PAUSE");
