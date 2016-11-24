@@ -85,30 +85,38 @@ int test_NSObjects() {
 
     @autoreleasepool {
         // char * <=> NSString * Encoding
-        const char *s1, *s2 = "EFGH";
-        NSString *str1 = @"ABCD", *str2 = @"";
+        const char *s1, *s2 = "EFGH가나다라";
+        NSString *str1 = @"ABCD가나다라", *str2 = @"";
 
         NSLog(@"%@", str1);
         s1 = [str1 cStringUsingEncoding:NSShiftJISStringEncoding];
         printf("NSShiftJISStringEncoding: %s\n", s1);
+
         s1 = [str1 cStringUsingEncoding:NSUTF8StringEncoding];
         printf("NSUTF8StringEncoding: %s\n", s1);
+
         s1 = [str1 cStringUsingEncoding:NSASCIIStringEncoding];
         printf("NSASCIIStringEncoding: %s\n", s1);
+
         s1 = [str1 cStringUsingEncoding:NSUnicodeStringEncoding];
         printf("NSUnicodeStringEncoding: %s\n", s1);
+
         s1 = [str1 cStringUsingEncoding:NSMacOSRomanStringEncoding];
         printf("NSMacOSRomanStringEncoding: %s\n", s1);
 
         printf("%s\n", s2);
         str2 = [NSString stringWithCString:s2 encoding:NSUTF8StringEncoding];
         NSLog(@"NSUTF8StringEncoding: %@", str2);
+
         str2 = [NSString stringWithCString:s2 encoding:NSShiftJISStringEncoding];
         NSLog(@"NSShiftJISStringEncoding: %@", str2);
+
         str2 = [NSString stringWithCString:s2 encoding:NSASCIIStringEncoding];
         NSLog(@"NSASCIIStringEncoding: %@", str2);
+
         str2 = [NSString stringWithCString:s2 encoding:NSUnicodeStringEncoding];
         NSLog(@"NSUnicodeStringEncoding: %@", str2);
+
         str2 = [NSString stringWithCString:s2 encoding:NSMacOSRomanStringEncoding];
         NSLog(@"NSMacOSRomanStringEncoding: %@", str2);
     }
@@ -119,6 +127,7 @@ int test_NSObjects() {
 
         str = [NSMutableString stringWithString:@"ABCDEFG"];
         NSLog(@"NSMutableString stringWithString: %@", str);
+
         str = [NSMutableString stringWithString:@"가나다라마바사"];
         NSLog(@"NSMutableString stringWithString: %@", str);
 
@@ -132,6 +141,25 @@ int test_NSObjects() {
         // insertString + atIndex
         [str insertString:@"fkak" atIndex:3];
         NSLog(@"NSMutableString insertString: %@", str);
+    }
+
+    @autoreleasepool {
+        // NSString[]
+        NSString *str[] = {@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ"};
+//        NSLog(@"NSString str[]=%@", str);
+
+        // NSArray nil should be at last object
+        NSArray *array = [NSArray arrayWithObject:@"ABCD"];
+        NSLog(@"NSArray arrayWithObject=%@", array);
+
+        array = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", array);
+
+        array = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", @"abc", @"nil"];
+        NSLog(@"NSArray arrayWithObjects(nil omitted)=%@", array);
+
+        array = [NSArray arrayWithObjects:str count:3];
+        NSLog(@"NSArray arrayWithObjects(with count)=%@", array);
     }
 
     system("PAUSE");
