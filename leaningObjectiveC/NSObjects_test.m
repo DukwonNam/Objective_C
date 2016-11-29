@@ -162,6 +162,38 @@ int test_NSObjects() {
         NSLog(@"NSArray arrayWithObjects(with count)=%@", array);
     }
 
+    @autoreleasepool {
+        NSArray *a1 = [NSArray arrayWithObjects:@"ABC", @"DEF", @"GHI", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", a1);
+        NSArray *a2 = [NSArray arrayWithArray:a1];
+        NSLog(@"NSArray arrayWithArray=%@", a2);
+
+        NSArray *a3 = [NSArray arrayWithObjects:@"가나다", @"라마바", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", a3);
+
+        NSArray *b1 = [a1 arrayByAddingObjectsFromArray:a3];
+        NSLog(@"NSArray a1 arrayByAddingObjectsFromArray a3=%@", b1);
+        NSLog(@"NSArray arrayByAddingObjectsFromArray a1=%@", a1);
+        b1 = [a3 arrayByAddingObjectsFromArray:a3];
+        NSLog(@"NSArray a3 arrayByAddingObjectsFromArray a3=%@", b1);
+
+        NSString *str = [b1 objectAtIndex:1];
+        NSLog(@"NSArray b1 objectAtIndex 1=%@", str);
+
+        NSInteger u = [b1 indexOfObject:@"DEF"];
+        NSLog(@"NSArray b1 indexOfObject=%d", u);
+        u = [b1 indexOfObject:str];
+        NSLog(@"NSArray b1 indexOfObject=%d", u);
+        int i = u;
+        NSLog(@"int i = u NSInteger=%d", i);
+
+        BOOL is = [b1 containsObject:@"DEF"];
+        NSLog(@"NSArray b1 containsObject=%d", is);
+        is = [b1 containsObject:str];
+        NSLog(@"NSArray b1 containsObject=%d", is);
+
+    }
+
     system("PAUSE");
     return 0;
 }
