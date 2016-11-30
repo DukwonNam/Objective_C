@@ -194,6 +194,32 @@ int test_NSObjects() {
 
     }
 
+    @autoreleasepool {
+        // NSMutableArray
+        NSMutableArray *m;
+        m = [NSMutableArray arrayWithCapacity:5];
+        NSLog(@"NSMutableArray arrayWithCapacity=%@", m);
+        NSArray *a = [NSArray arrayWithObjects:@"ABC", @"가나다", @"DEF", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", a);
+
+        [m addObjectsFromArray:a];
+        NSLog(@"NSMutableArray addObjectsFromArray=%@", m);
+        [m addObject:@"XYZ"];
+        NSLog(@"NSMutableArray addObject=%@", m);
+//        [m insertObject:@"qwe" atIndex:10];
+        [m insertObject:@"qwe" atIndex:1];
+        NSLog(@"NSMutableArray insertObject=%@", m);
+
+        [m removeObject:@"ABC"];
+        NSLog(@"NSMutableArray removeObject=%@", m);
+
+        [m replaceObjectAtIndex:1 withObject:@"rty"];
+        NSLog(@"NSMutableArray replaceObjectAtIndex=%@", m);
+
+        [m exchangeObjectAtIndex:1 withObjectAtIndex:2];
+        NSLog(@"NSMutableArray exchangeObjectAtIndex=%@", m);
+    }
+
     system("PAUSE");
     return 0;
 }
