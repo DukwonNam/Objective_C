@@ -220,6 +220,33 @@ int test_NSObjects() {
         NSLog(@"NSMutableArray exchangeObjectAtIndex=%@", m);
     }
 
+    @autoreleasepool {
+        NSArray *array = [NSArray arrayWithObjects:@"ABC", @"DEF", @"GHI", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", array);
+
+        // NSArray objectAtIndex
+        int i;
+        for (i = 0; i < [array count]; i++) {
+            NSLog(@"NSArray objectAtIndex %d=%@", i, [array objectAtIndex:i]);
+        }
+
+        // NSArray for (id obj in array)
+        for (id obj in array) {
+            NSLog(@"NSArray id obj in array=%@", obj);
+        }
+
+        // NSArray objectEnumerator
+        NSEnumerator *enumerator = [array objectEnumerator];
+        while (1) {
+            id obj = [enumerator nextObject];
+            if (obj == nil) {
+                break;
+            }
+
+            NSLog(@"NSEnumerator nextObject=%@", obj);
+        }
+    }
+
     system("PAUSE");
     return 0;
 }
