@@ -1,3 +1,11 @@
+//
+//  c_fundamentals.m
+//  leaningObjectiveC
+//
+//  Created by DukwonNam on 2016. 11..
+//  Copyright © 2016 year DukwonNam. All rights reserved.
+//
+
 #import <string.h>
 #import <stdlib.h>
 #import <memory.h>

@@ -1,3 +1,11 @@
+//
+//  calculateCalorie.m
+//  leaningObjectiveC
+//
+//  Created by DukwonNam on 2016. 11..
+//  Copyright © 2016 year DukwonNam. All rights reserved.
+//
+
 #import <stdio.h>
 #import <string.h>
 
