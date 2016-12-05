@@ -10,13 +10,20 @@
 #define Animal_h
 
 @interface Animal:NSObject {
-    @public
-    int age;
     int food;
     float weight;
+    
+    @public
+    int agePublic;
+    @private
+    int agePrivate;
+    @protected
+    int ageProtected;
+    @package
+    int agePackage;
 }
 
--(void) run;
+-(void) running;
 @end
 
 

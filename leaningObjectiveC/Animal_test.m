@@ -10,12 +10,18 @@
 #import "Animal.h"
 
 int test_Animal_classes() {
-    Animal *animal = [Animal alloc];
-    animal.run;
-    [animal run];
+    @autoreleasepool {
+        Animal *animal = [[Animal alloc] init];
+        animal.running;
+        [animal running];
+//        NSLog(@"test_Animal_classes animal->agePrivate=%d", animal->agePrivate);
+//        NSLog(@"test_Animal_classes animal->ageProtected=%d", animal->ageProtected);
+        NSLog(@"test_Animal_classes animal->agePublic=%d", animal->agePublic);
+        NSLog(@"test_Animal_classes animal->agePackage=%d", animal->agePackage);
 
-    id thing = [Animal alloc];
-    [thing run];
+        id thing = [Animal alloc];
+        [thing running];
+    }
 
     return 1;
 }

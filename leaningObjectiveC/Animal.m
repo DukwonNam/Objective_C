@@ -11,8 +11,8 @@
 
 @implementation Animal
 
--(void) run {
-    NSLog(@"run");
+-(void) running {
+    NSLog(@"running");
 }
 
 @end
