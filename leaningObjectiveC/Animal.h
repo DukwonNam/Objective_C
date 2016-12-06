@@ -24,6 +24,10 @@
 }
 
 -(void) running;
+-(int) getAgePrivate;
+-(int) feed:(int)food;
+-(float) feedAndExercise:(int)food :(int)exerciseTime;
+-(float) feedAndExercise2:(int)food exercise:(int)exerciseTime;
 @end
 
 
