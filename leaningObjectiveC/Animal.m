@@ -21,12 +21,12 @@
     self->food += food;
     return self->food;
 }
--(float) feedAndWeight:(int)food :(int)exerciseTime {
+-(float) feedAndExercise:(int)food :(int)exerciseTime {
     self->food += food;
     weight = self->food - exerciseTime;
     return weight;
 }
--(float) feedAndWeight2:(int)food exercise:(int)exerciseTime {
+-(float) feedAndExercise2:(int)food exercise:(int)exerciseTime {
     self->food += food;
     weight = self->food - exerciseTime;
     return weight;
