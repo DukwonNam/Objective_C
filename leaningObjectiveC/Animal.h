@@ -10,6 +10,7 @@
 #define Animal_h
 
 @interface Animal:NSObject {
+
     int food;
     float weight;
     
@@ -28,6 +29,9 @@
 -(int) feed:(int)food;
 -(float) feedAndExercise:(int)food :(int)exerciseTime;
 -(float) feedAndExercise2:(int)food exercise:(int)exerciseTime;
+//-(int) feed:(int)food;
+//-(float) feedAndExercise:(int)food :(int)exerciseTime;
+//-(float) feedAndExercise2:(int)food exercise:(int)exerciseTime;
 @end
 
 
