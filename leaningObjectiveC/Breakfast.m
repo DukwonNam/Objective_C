@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Breakfast.h"
+#import "Lunch.h"
 
 @implementation Breakfast
 
@@ -20,6 +21,12 @@
 
 -(void) eatBread {
     NSLog(@"eatBread");
+}
+
+-(void) showTotalBreadNum {
+    id lunch = [[Lunch alloc] init];
+    int n = [lunch addBreadNum:5 addWith:4];
+    NSLog(@"showTotalBreadNum = %d", n);
 }
 
 @end

@@ -8,8 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Breakfast.h"
+#import "Lunch.h"
 
 void test_Breakfast_classes() {
-    Breakfast *breakfast = [Breakfast alloc];
-    [breakfast eatButteredBread];
+    @autoreleasepool {
+        Breakfast *breakfast = [Breakfast alloc];
+        [breakfast eatButteredBread];
+        [breakfast showTotalBreadNum];
+        NSLog(@"lunchTime = %d", [Lunch lunchTime:8]);
+    }
 }

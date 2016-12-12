@@ -13,15 +13,15 @@ int main(int argc, const char * argv[]) {
 //    calculateCalories();
 //    test_NSObjects();
 //    test_Animal_classes();
-    test_Breakfast_classes();
-
     @autoreleasepool {
         Animal *animal = [[Animal alloc] init];
-//        NSLog(@"main animal->agePrivate=%d", animal->agePrivate);
-//        NSLog(@"main animal->ageProtected=%d", animal->ageProtected);
+        //        NSLog(@"main animal->agePrivate=%d", animal->agePrivate);
+        //        NSLog(@"main animal->ageProtected=%d", animal->ageProtected);
         NSLog(@"main animal->agePublic=%d", animal->agePublic);
         NSLog(@"main animal->agePackage=%d", animal->agePackage);
     }
+    test_Breakfast_classes();
+
 
     system("PAUSE");
     return 0;

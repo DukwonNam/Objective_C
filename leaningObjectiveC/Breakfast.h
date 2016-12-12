@@ -12,6 +12,7 @@
 @interface Breakfast:NSObject
 -(void) eatButteredBread;
 -(void) eatBread;
+-(void) showTotalBreadNum;
 @end
 
 #endif /* Breakfast_h */
