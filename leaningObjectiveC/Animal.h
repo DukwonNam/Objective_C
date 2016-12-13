@@ -23,7 +23,7 @@
     @package
     int agePackage;
 }
-
+-(id) init;
 -(void) running;
 -(int) getAgePrivate;
 -(int) feed:(int)food;

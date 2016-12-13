@@ -11,6 +11,14 @@
 
 @implementation Animal
 
+-(id) init {
+    self = [super init];
+    if (self != nil) {
+        self->agePrivate = 2;
+    }
+    return self;
+}
+
 -(void) running {
     NSLog(@"running");
 }

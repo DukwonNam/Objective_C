@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		178900821DDC8D22005DBF07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178900811DDC8D22005DBF07 /* main.m */; };
+		179CB8861DFF74D2003863C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 179CB8851DFF74D2003863C4 /* TestClass.m */; };
 		17A543791DDD634900518D38 /* c_fundamentals.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A543781DDD634900518D38 /* c_fundamentals.m */; };
 		17A5437B1DDD635100518D38 /* calculateCalorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437A1DDD635100518D38 /* calculateCalorie.m */; };
 		17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437C1DDD636100518D38 /* NSObjects_test.m */; };
@@ -33,6 +34,7 @@
 /* Begin PBXFileReference section */
 		1789007E1DDC8D22005DBF07 /* leaningObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leaningObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
 		178900811DDC8D22005DBF07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		179CB8851DFF74D2003863C4 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
 		17A543781DDD634900518D38 /* c_fundamentals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = c_fundamentals.m; sourceTree = "<group>"; };
 		17A5437A1DDD635100518D38 /* calculateCalorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculateCalorie.m; sourceTree = "<group>"; };
 		17A5437C1DDD636100518D38 /* NSObjects_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjects_test.m; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 		178900801DDC8D22005DBF07 /* leaningObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				179CB8841DFF74AD003863C4 /* test */,
 				17C6C4E61DFA316B00B55A12 /* breakfast */,
 				17C2907B1DF0F48B00E41E4E /* animals */,
 				17A5437C1DDD636100518D38 /* NSObjects_test.m */,
@@ -84,6 +87,14 @@
 				178900811DDC8D22005DBF07 /* main.m */,
 			);
 			path = leaningObjectiveC;
+			sourceTree = "<group>";
+		};
+		179CB8841DFF74AD003863C4 /* test */ = {
+			isa = PBXGroup;
+			children = (
+				179CB8851DFF74D2003863C4 /* TestClass.m */,
+			);
+			name = test;
 			sourceTree = "<group>";
 		};
 		17C2907B1DF0F48B00E41E4E /* animals */ = {
@@ -165,6 +176,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				179CB8861DFF74D2003863C4 /* TestClass.m in Sources */,
 				17A5437B1DDD635100518D38 /* calculateCalorie.m in Sources */,
 				17C290801DF0F6EB00E41E4E /* Animal_test.m in Sources */,
 				17C6C4E91DFA31D700B55A12 /* Breakfast.m in Sources */,
