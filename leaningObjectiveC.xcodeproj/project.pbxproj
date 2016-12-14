@@ -40,6 +40,7 @@
 		17A5437C1DDD636100518D38 /* NSObjects_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjects_test.m; sourceTree = "<group>"; };
 		17A5C4551DFE230100C6FE8D /* Lunch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lunch.h; sourceTree = "<group>"; };
 		17A5C4561DFE24BD00C6FE8D /* Lunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lunch.m; sourceTree = "<group>"; };
+		17AFCE411E00C84A00938BB3 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		17C2907C1DF0F4C900E41E4E /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
 		17C2907D1DF0F62B00E41E4E /* Animal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal.m; sourceTree = "<group>"; };
 		17C2907F1DF0F6EB00E41E4E /* Animal_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Animal_test.m; sourceTree = "<group>"; };
@@ -78,6 +79,7 @@
 		178900801DDC8D22005DBF07 /* leaningObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				17AFCE401E00C7FB00938BB3 /* cars */,
 				179CB8841DFF74AD003863C4 /* test */,
 				17C6C4E61DFA316B00B55A12 /* breakfast */,
 				17C2907B1DF0F48B00E41E4E /* animals */,
@@ -95,6 +97,14 @@
 				179CB8851DFF74D2003863C4 /* TestClass.m */,
 			);
 			name = test;
+			sourceTree = "<group>";
+		};
+		17AFCE401E00C7FB00938BB3 /* cars */ = {
+			isa = PBXGroup;
+			children = (
+				17AFCE411E00C84A00938BB3 /* Car.h */,
+			);
+			name = cars;
 			sourceTree = "<group>";
 		};
 		17C2907B1DF0F48B00E41E4E /* animals */ = {

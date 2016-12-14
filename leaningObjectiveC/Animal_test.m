@@ -2,8 +2,8 @@
 //  Animal_test.m
 //  leaningObjectiveC
 //
-//  Created by korail on 2016. 12. 2..
-//  Copyright © 2016년 korail. All rights reserved.
+//  Created by DukwonNam on 2016. 12. 2..
+//  Copyright © 2016년 DukwonNam. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

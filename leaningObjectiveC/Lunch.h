@@ -2,8 +2,8 @@
 //  Lunch.h
 //  leaningObjectiveC
 //
-//  Created by korail on 2016. 12. 12..
-//  Copyright © 2016년 korail. All rights reserved.
+//  Created by DukwonNam on 2016. 12. 12..
+//  Copyright © 2016년 DukwonNam. All rights reserved.
 //
 
 #ifndef Lunch_h
