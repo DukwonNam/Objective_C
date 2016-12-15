@@ -24,7 +24,7 @@
     return self;
 }
 
-@synthesize size;
+@synthesize mSize;
 
 @end
 
@@ -45,7 +45,7 @@
 }
 
 - (void)printInfo {
-    NSLog(@"%@(%dcc)\n", mName, mEngine.size);
+    NSLog(@"%@(%dcc)\n", mName, mEngine.mSize);
 }
 
 @end

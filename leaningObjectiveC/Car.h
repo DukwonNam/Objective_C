@@ -17,7 +17,7 @@
 - (id)init;
 - (id)initWithEngine:(NSString *)name Size:(int)size;
 
-@property(readwrite) int size;
+@property(readwrite) int mSize;
 
 @end
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175C900D1E0218DD00681973 /* Car_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 175C900C1E0218DD00681973 /* Car_test.m */; };
 		178900821DDC8D22005DBF07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178900811DDC8D22005DBF07 /* main.m */; };
 		179CB8861DFF74D2003863C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 179CB8851DFF74D2003863C4 /* TestClass.m */; };
 		17A543791DDD634900518D38 /* c_fundamentals.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A543781DDD634900518D38 /* c_fundamentals.m */; };
@@ -33,6 +34,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		175C900C1E0218DD00681973 /* Car_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car_test.m; sourceTree = "<group>"; };
 		1789007E1DDC8D22005DBF07 /* leaningObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leaningObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
 		178900811DDC8D22005DBF07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		179CB8851DFF74D2003863C4 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 			children = (
 				17AFCE411E00C84A00938BB3 /* Car.h */,
 				17AFCE421E00CB4900938BB3 /* Car.m */,
+				175C900C1E0218DD00681973 /* Car_test.m */,
 			);
 			name = cars;
 			sourceTree = "<group>";
@@ -195,6 +198,7 @@
 				17C290801DF0F6EB00E41E4E /* Animal_test.m in Sources */,
 				17C6C4E91DFA31D700B55A12 /* Breakfast.m in Sources */,
 				17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */,
+				175C900D1E0218DD00681973 /* Car_test.m in Sources */,
 				17C2907E1DF0F62B00E41E4E /* Animal.m in Sources */,
 				17C6C4F01DFA35D100B55A12 /* Breakfast_test.m in Sources */,
 				17A5C4571DFE24BD00C6FE8D /* Lunch.m in Sources */,

@@ -21,7 +21,8 @@ int main(int argc, const char * argv[]) {
         NSLog(@"main animal->agePackage=%d", animal->agePackage);
     }
 //    test_Breakfast_classes();
-    test_TestClass_classes();
+//    test_TestClass_classes();
+    test_Car_classes();
 
 
     system("PAUSE");
