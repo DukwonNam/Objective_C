@@ -19,22 +19,25 @@
     return self;
 }
 
--(void) running {
+- (void)running {
     NSLog(@"running");
 }
--(int) getAgePrivate {
+- (void)turning {
+    NSLog(@"turning");
+}
+- (int)getAgePrivate {
     return agePrivate;
 }
--(int) feed:(int)food {
+- (int)feed:(int)food {
     self->food += food;
     return self->food;
 }
--(float) feedAndExercise:(int)food :(int)exerciseTime {
+- (float)feedAndExercise:(int)food :(int)exerciseTime {
     self->food += food;
     weight = self->food - exerciseTime;
     return weight;
 }
--(float) feedAndExercise2:(int)food exercise:(int)exerciseTime {
+- (float)feedAndExercise2:(int)food exercise:(int)exerciseTime {
     self->food += food;
     weight = self->food - exerciseTime;
     return weight;

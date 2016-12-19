@@ -12,6 +12,7 @@
 		177F64541E036BC600B09728 /* Fish_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 177F64531E036BC600B09728 /* Fish_test.m */; };
 		178900821DDC8D22005DBF07 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 178900811DDC8D22005DBF07 /* main.m */; };
 		179CB8861DFF74D2003863C4 /* TestClass.m in Sources */ = {isa = PBXBuildFile; fileRef = 179CB8851DFF74D2003863C4 /* TestClass.m */; };
+		179E98BC1E075D1D00328A02 /* Pet.m in Sources */ = {isa = PBXBuildFile; fileRef = 179E98BB1E075D1D00328A02 /* Pet.m */; };
 		17A543791DDD634900518D38 /* c_fundamentals.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A543781DDD634900518D38 /* c_fundamentals.m */; };
 		17A5437B1DDD635100518D38 /* calculateCalorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437A1DDD635100518D38 /* calculateCalorie.m */; };
 		17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437C1DDD636100518D38 /* NSObjects_test.m */; };
@@ -43,6 +44,8 @@
 		1789007E1DDC8D22005DBF07 /* leaningObjectiveC */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = leaningObjectiveC; sourceTree = BUILT_PRODUCTS_DIR; };
 		178900811DDC8D22005DBF07 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		179CB8851DFF74D2003863C4 /* TestClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestClass.m; sourceTree = "<group>"; };
+		179E98BA1E075CCA00328A02 /* Pet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Pet.h; sourceTree = "<group>"; };
+		179E98BB1E075D1D00328A02 /* Pet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pet.m; sourceTree = "<group>"; };
 		17A543781DDD634900518D38 /* c_fundamentals.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = c_fundamentals.m; sourceTree = "<group>"; };
 		17A5437A1DDD635100518D38 /* calculateCalorie.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = calculateCalorie.m; sourceTree = "<group>"; };
 		17A5437C1DDD636100518D38 /* NSObjects_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjects_test.m; sourceTree = "<group>"; };
@@ -135,6 +138,8 @@
 				17C2907C1DF0F4C900E41E4E /* Animal.h */,
 				17C2907D1DF0F62B00E41E4E /* Animal.m */,
 				17C2907F1DF0F6EB00E41E4E /* Animal_test.m */,
+				179E98BA1E075CCA00328A02 /* Pet.h */,
+				179E98BB1E075D1D00328A02 /* Pet.m */,
 			);
 			name = animals;
 			sourceTree = "<group>";
@@ -217,6 +222,7 @@
 				17C6C4E91DFA31D700B55A12 /* Breakfast.m in Sources */,
 				17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */,
 				175C900D1E0218DD00681973 /* Car_test.m in Sources */,
+				179E98BC1E075D1D00328A02 /* Pet.m in Sources */,
 				17C2907E1DF0F62B00E41E4E /* Animal.m in Sources */,
 				17C6C4F01DFA35D100B55A12 /* Breakfast_test.m in Sources */,
 				17A5C4571DFE24BD00C6FE8D /* Lunch.m in Sources */,

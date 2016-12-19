@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Animal.h"
+#import "Pet.h"
 
 int test_Animal_classes() {
     @autoreleasepool {
@@ -28,6 +29,12 @@ int test_Animal_classes() {
 
         id thing = [Animal alloc];
         [thing running];
+        [thing turning];
+
+        id dog = [[Pet alloc] init];
+        [dog sing];
+        [dog running];
+        [dog turning];
     }
 
     return 1;

@@ -12,7 +12,6 @@ int main(int argc, const char * argv[]) {
 //    test_C_fundamentals();
 //    calculateCalories();
 //    test_NSObjects();
-//    test_Animal_classes();
     @autoreleasepool {
         Animal *animal = [[Animal alloc] init];
         //        NSLog(@"main animal->agePrivate=%d", animal->agePrivate);
@@ -20,10 +19,11 @@ int main(int argc, const char * argv[]) {
         NSLog(@"main animal->agePublic=%d", animal->agePublic);
         NSLog(@"main animal->agePackage=%d", animal->agePackage);
     }
+    test_Animal_classes();
 //    test_Breakfast_classes();
 //    test_TestClass_classes();
 //    test_Car_classes();
-    test_Fish_classes();
+//    test_Fish_classes();
 
 
     system("PAUSE");

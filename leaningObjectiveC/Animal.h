@@ -23,12 +23,13 @@
     @package
     int agePackage;
 }
--(id) init;
--(void) running;
--(int) getAgePrivate;
--(int) feed:(int)food;
--(float) feedAndExercise:(int)food :(int)exerciseTime;
--(float) feedAndExercise2:(int)food exercise:(int)exerciseTime;
+- (id)init;
+- (void)running;
+- (void)turning;
+- (int)getAgePrivate;
+- (int)feed:(int)food;
+- (float)feedAndExercise:(int)food :(int)exerciseTime;
+- (float)feedAndExercise2:(int)food exercise:(int)exerciseTime;
 //-(int) feed:(int)food;
 //-(float) feedAndExercise:(int)food :(int)exerciseTime;
 //-(float) feedAndExercise2:(int)food exercise:(int)exerciseTime;
