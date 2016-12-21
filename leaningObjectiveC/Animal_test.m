@@ -14,8 +14,8 @@ int test_Animal_classes() {
     @autoreleasepool {
         Animal *animal = [[Animal alloc] init];
         Animal *animal2 = [Animal alloc];
-        animal.running;
-        [animal running];
+        animal.run;
+        [animal run];
 //        NSLog(@"test_Animal_classes animal->agePrivate=%d", animal->agePrivate);
 //        NSLog(@"test_Animal_classes animal->ageProtected=%d", animal->ageProtected);
         NSLog(@"test_Animal_classes animal->agePublic=%d", animal->agePublic);
@@ -27,14 +27,17 @@ int test_Animal_classes() {
         NSLog(@"test_Animal_classes [animal feedAndExercise:300 :400]=%f", [animal feedAndExercise:300 :400]);
         NSLog(@"test_Animal_classes [animal feedAndExercise2:300 exercise:400]=%f", [animal feedAndExercise2:300 exercise:400]);
 
-        id thing = [Animal alloc];
-        [thing running];
+        Animal *thing = [Animal alloc];
+        [thing run];
         [thing turning];
+//        thing.name = @"Animal";
 
-        id dog = [[Pet alloc] init];
+        Pet *dog = [[Pet alloc] init];
         [dog sing];
-        [dog running];
+        dog.run;
+//        [dog run];
         [dog turning];
+        dog.name = @"Dog";
     }
 
     return 1;

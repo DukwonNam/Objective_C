@@ -15,6 +15,8 @@
     int b;
 }
 
+@property (assign, readwrite) NSString *name;
+
 - (void)sing;
 
 @end

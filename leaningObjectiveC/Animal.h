@@ -10,7 +10,6 @@
 #define Animal_h
 
 @interface Animal:NSObject {
-
     int food;
     float weight;
     
@@ -23,8 +22,11 @@
     @package
     int agePackage;
 }
+
+@property (assign, readonly) NSString *name;
+
 - (id)init;
-- (void)running;
+- (void)run;
 - (void)turning;
 - (int)getAgePrivate;
 - (int)feed:(int)food;

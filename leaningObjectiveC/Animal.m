@@ -11,6 +11,8 @@
 
 @implementation Animal
 
+@synthesize name;
+
 -(id) init {
     self = [super init];
     if (self != nil) {
@@ -19,8 +21,8 @@
     return self;
 }
 
-- (void)running {
-    NSLog(@"running");
+- (void)run {
+    NSLog(@"run");
 }
 - (void)turning {
     NSLog(@"turning");
