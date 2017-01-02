@@ -19,11 +19,12 @@ int main(int argc, const char * argv[]) {
         NSLog(@"main animal->agePublic=%d", animal->agePublic);
         NSLog(@"main animal->agePackage=%d", animal->agePackage);
     }
-    test_Animal_classes();
+//    test_Animal_classes();
 //    test_Breakfast_classes();
 //    test_TestClass_classes();
 //    test_Car_classes();
 //    test_Fish_classes();
+    test_Fruit_classes();
 
 
     system("PAUSE");

@@ -37,7 +37,7 @@ int test_Animal_classes() {
         dog.run;
 //        [dog run];
         [dog turning];
-        dog.name = @"Dog";
+//        dog.name = @"Dog";
     }
 
     return 1;
