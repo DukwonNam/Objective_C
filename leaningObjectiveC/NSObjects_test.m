@@ -254,6 +254,13 @@ int test_NSObjects() {
             NSLog(@"NSEnumerator nextObject=%@", obj);
         }
     }
+    
+    @autoreleasepool {
+        NSString *str = [[NSString alloc] init];
+        NSLog(@"str=%p", str);
+//        [str release];
+//        NSLog(@"str=%p", str);
+    }
 
     system("PAUSE");
     return 0;

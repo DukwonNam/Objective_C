@@ -64,6 +64,10 @@ void test_TestClass_classes() {
         NSLog(@"a.num6=%@", a.num6);
         NSLog(@"a.num7=%@", a.num7);
 //        NSLog(@"a.num8=%@", a._num8);
+        
     }
+    
+//    TestClass *test1 = [[TestClass alloc] init];
+//    NSLog(@"test1 retainCount=%lu", (unsigned long)[test1 retainCount]);
 }
 

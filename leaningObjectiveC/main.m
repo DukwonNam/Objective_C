@@ -24,8 +24,9 @@ int main(int argc, const char * argv[]) {
 //    test_TestClass_classes();
 //    test_Car_classes();
 //    test_Fish_classes();
-    test_Fruit_classes();
+//    test_Fruit_classes();
 
+    test_File_IO();
 
     system("PAUSE");
     return 0;

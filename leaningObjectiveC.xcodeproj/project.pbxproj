@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		171327FC1E238BE800D3C861 /* File_io_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 171327FB1E238BE800D3C861 /* File_io_test.m */; };
 		175C900D1E0218DD00681973 /* Car_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 175C900C1E0218DD00681973 /* Car_test.m */; };
 		177F64521E0369C800B09728 /* Fish.m in Sources */ = {isa = PBXBuildFile; fileRef = 177F64511E0369C800B09728 /* Fish.m */; };
 		177F64541E036BC600B09728 /* Fish_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 177F64531E036BC600B09728 /* Fish_test.m */; };
@@ -39,6 +40,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		171327FB1E238BE800D3C861 /* File_io_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = File_io_test.m; sourceTree = "<group>"; };
 		175C900C1E0218DD00681973 /* Car_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car_test.m; sourceTree = "<group>"; };
 		177F64501E03693100B09728 /* Fish.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Fish.h; sourceTree = "<group>"; };
 		177F64511E0369C800B09728 /* Fish.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Fish.m; sourceTree = "<group>"; };
@@ -78,6 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		171327FA1E238A0400D3C861 /* file_io */ = {
+			isa = PBXGroup;
+			children = (
+				171327FB1E238BE800D3C861 /* File_io_test.m */,
+			);
+			name = file_io;
+			sourceTree = "<group>";
+		};
+		171E3A9B1E1E04E2007FA92B /* ruler */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = ruler;
+			sourceTree = "<group>";
+		};
 		177F644F1E03691500B09728 /* fish */ = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +135,8 @@
 		178900801DDC8D22005DBF07 /* leaningObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				171327FA1E238A0400D3C861 /* file_io */,
+				171E3A9B1E1E04E2007FA92B /* ruler */,
 				178894FE1E1A0498008A383F /* fruit */,
 				177F644F1E03691500B09728 /* fish */,
 				17AFCE401E00C7FB00938BB3 /* cars */,
@@ -246,6 +265,7 @@
 				17C6C4F01DFA35D100B55A12 /* Breakfast_test.m in Sources */,
 				178895041E1A08C5008A383F /* Fruit.m in Sources */,
 				17A5C4571DFE24BD00C6FE8D /* Lunch.m in Sources */,
+				171327FC1E238BE800D3C861 /* File_io_test.m in Sources */,
 				178900821DDC8D22005DBF07 /* main.m in Sources */,
 				17A543791DDD634900518D38 /* c_fundamentals.m in Sources */,
 			);
