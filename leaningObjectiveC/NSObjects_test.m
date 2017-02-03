@@ -160,14 +160,14 @@ int test_NSObjects() {
         NSArray *array = [NSArray arrayWithObject:@"ABCD"];
         NSLog(@"NSArray arrayWithObject=%@", array);
 
-        array = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", nil];
-        NSLog(@"NSArray arrayWithObjects=%@", array);
+        NSArray *array2 = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", nil];
+        NSLog(@"NSArray arrayWithObjects=%@", array2);
 
-        array = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", @"abc", @"nil"];
-        NSLog(@"NSArray arrayWithObjects(nil omitted)=%@", array);
+//        NSArray *array3 = [NSArray arrayWithObjects:@"ABCD", @"가나다", @"defghij", @"ㄱㄴㄷㄹㅁㅂㅅㅇㅈㅊㅋㅌㅍㅎ", @"abc", @"nil"];
+//        NSLog(@"NSArray arrayWithObjects(nil omitted)=%@", array3);
 
-        array = [NSArray arrayWithObjects:str count:3];
-        NSLog(@"NSArray arrayWithObjects(with count)=%@", array);
+        NSArray *array4 = [NSArray arrayWithObjects:str count:3];
+        NSLog(@"NSArray arrayWithObjects(with count)=%@", array4);
     }
 
     @autoreleasepool {
@@ -260,6 +260,109 @@ int test_NSObjects() {
         NSLog(@"str=%p", str);
 //        [str release];
 //        NSLog(@"str=%p", str);
+    }
+    
+    @autoreleasepool {
+        
+        // NSDate [NSDate date] == [[NSDate alloc] init]
+        NSDate *date = [NSDate date];
+        NSLog(@"NSDate date=%@", date);
+        
+        // NSDate dateWithTimeIntervalSinceNow + add seconds
+        date = [NSDate dateWithTimeIntervalSinceNow:3 * 24 * 60 * 60];
+        NSLog(@"NSDate dateWithTimeIntervalSinceNow=%@", date);
+        
+        // NSDate dateWithString + yyyy-MM-DD hh:mm:ss TMZ
+        date = [NSDate dateWithString:@"2017-01-01 12:34:56 +0900"];
+        NSLog(@"NSDate dateWithString=%@", date);
+        
+        // NSDate dateWithNaturalLanguageString + yyyy/MM/dd
+        date = [NSDate dateWithNaturalLanguageString:@"2017/01/02"];
+        NSLog(@"NSDate dateWithNaturalLanguageString=%@", date);
+        // NSDate dateWithNaturalLanguageString + Dec 31th 2016
+        date = [NSDate dateWithNaturalLanguageString:@"Dec 31th 2016"];
+        NSLog(@"NSDate dateWithNaturalLanguageString=%@", date);
+        // NSDate dateWithNaturalLanguageString + last Sunday
+        date = [NSDate dateWithNaturalLanguageString:@"last Sunday"];
+        NSLog(@"NSDate dateWithNaturalLanguageString=%@", date);
+        
+        // NSDateFormatter setDateFormat + stringFromDate
+        NSDateFormatter *formatter = [[NSDateFormatter alloc] init];
+        [formatter setDateFormat:@"yyyy/MM/dd HH:mm:ss Z"];
+        NSString *str = [formatter stringFromDate:date];
+        NSLog(@"NSDateFormatter stringFromDate=%@", str);
+        
+        // NSTimeInterval timeIntervalSinceDate
+        NSDate *newDate = [NSDate date];
+        NSTimeInterval sec = [date timeIntervalSinceDate:newDate];
+        NSLog(@"NSTimeInterval timeIntervalSinceDate=%f", sec);
+        int days = sec / (24 * 60 * 60);
+        NSLog(@"NSTimeInterval timeIntervalSinceDate=%d", days);
+    }
+    
+    @autoreleasepool {
+        
+        // NSCalendar
+        NSDate *date = [NSDate date];
+        NSCalendar *calendar = [NSCalendar currentCalendar];
+        
+        /***************************************************************************
+         *  value           | NSCalendarUnit                | NSDateComponents
+         * -------------------------------------------------------------------------
+         *  AGE(BC/AC)      | NSEraCalendarUnit             | era
+         *  Year            | NSYearCalendarUnit            | year
+         *  Month           | NSMonthCalendarUnit           | month
+         *  Day             | NSDayCalendarUnit             | day
+         *  Hour            | NSHourCalendarUnit            | hour
+         *  Minute          | NSMinuteCalendarUnit          | minute
+         *  Second          | NSSecondCalendarUnit          | second
+         *  Day of the week | NSWeekdayCalendarUnit         | week
+         *  Week of Month   | NSWeekCalendarUnit            | weekday
+         *  Week of Year    | NSWeekdayOrdinalCalendarUnit  | weekdayOrdinal
+         ***************************************************************************/
+        NSCalendarUnit uni = NSYearCalendarUnit | NSMonthCalendarUnit | NSDayCalendarUnit;
+        
+        NSDateComponents *nsdc = [calendar components:uni fromDate:date];
+        
+        NSLog(@"%ld-%ld-%ld", [nsdc year], [nsdc month], [nsdc day]);
+    }
+    
+    @autoreleasepool {
+        
+        // NSDictionary dictionaryWithObjectsAndKeys
+        NSDictionary *dic = [NSDictionary dictionaryWithObjectsAndKeys:
+                             @"apple", @"A",
+                             @"banana", @"B",
+                             @"cherry", @"C",
+                             nil];
+        NSLog(@"NSDictionary dictionaryWithObjectsAndKeys=%@", dic);
+        
+        // NSDictionary dictionaryWithObjects + forKeys
+        NSArray *objArray = [NSArray arrayWithObjects:@"aroma", @"bus", @"cocacola", nil];
+        NSArray *keyArray = [NSArray arrayWithObjects:@"A", @"B", @"C", nil];
+        NSDictionary *dic2 = [NSDictionary dictionaryWithObjects:objArray forKeys:keyArray];
+        NSLog(@"NSDictionary dictionaryWithObject+forKey=%@", dic2);
+        
+        // NSDictionary dictionaryWithDictionary
+        NSDictionary *dic3 = [NSDictionary dictionaryWithDictionary:dic2];
+        NSLog(@"NSDictionary dictionaryWithDictionary=%@", dic3);
+        
+        // NSDictionary objectForKey
+        NSString *value= [dic objectForKey:@"B"];
+        NSLog(@"NSDictionary objectForKey=%@", value);
+        
+        // NSDictionary allValues
+        NSArray *valueArray= [dic allValues];
+        NSLog(@"NSDictionary allValues=%@", valueArray);
+        
+        // NSMutableDictionary setObject + forKey
+        NSMutableDictionary *mutableDic = [NSMutableDictionary dictionary];
+        [mutableDic setObject:[dic objectForKey:@"B"] forKey:@"B"];
+        [mutableDic setObject:[dic objectForKey:@"A"] forKey:@"A"];
+        [mutableDic setObject:[dic objectForKey:@"C"] forKey:@"C"];
+        NSLog(@"NSMutableDictionary setObject + forKey=%@", mutableDic);
+        [mutableDic removeObjectForKey:@"C"];
+        NSLog(@"NSMutableDictionary setObject + forKey=%@", mutableDic);
     }
 
     system("PAUSE");
