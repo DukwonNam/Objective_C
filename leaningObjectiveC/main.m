@@ -20,7 +20,7 @@ int main(int argc, const char * argv[]) {
         NSLog(@"main animal->agePackage=%d", animal->agePackage);
     }
 //    test_Animal_classes();
-    test_NSObjects();
+//    test_NSObjects();
 //    test_Breakfast_classes();
 //    test_TestClass_classes();
 //    test_Car_classes();
@@ -28,6 +28,7 @@ int main(int argc, const char * argv[]) {
 //    test_Fruit_classes();
 
 //    test_File_IO();
+    test_MyTimer();
 
     system("PAUSE");
     return 0;

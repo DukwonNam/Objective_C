@@ -364,6 +364,73 @@ int test_NSObjects() {
         [mutableDic removeObjectForKey:@"C"];
         NSLog(@"NSMutableDictionary setObject + forKey=%@", mutableDic);
     }
+    
+     @autoreleasepool {
+         
+         // NSSet setWithObjects
+         NSSet *set = [NSSet setWithObjects:@"ABC", @"ABC", @"aBC", @"AbC", @"ABc", @"ABA", @"ABB", nil];
+         NSLog(@"NSSet setWithObjects=%@", set);
+         
+         // NSSet setWithArray
+         NSArray *inputArray = [NSArray arrayWithObjects:@"DEF", @"DEF", @"dEF", @"DeF", @"DEf", @"DED", @"DEE", nil];
+         NSSet *set2 = [NSSet setWithArray:inputArray];
+         NSLog(@"NSSet setWithArray=%@", set2);
+         
+         // NSSet setWithSet
+         NSSet *set3 = [NSSet setWithSet:set2];
+         NSLog(@"NSSet setWithSet=%@", set3);
+         
+         // NSSet allObjects
+         NSArray *array1 = [set3 allObjects];
+         NSLog(@"NSSet allObjects=%@", array1);
+         
+         // NSMutableSet addObject, removeObject
+         NSMutableSet *mutableSet = [NSMutableSet setWithObjects:@"ABC", nil];
+         [mutableSet addObject:@"DEF"];
+         NSLog(@"NSMutableSet addObject=%@", mutableSet);
+         [mutableSet removeObject:@"ABC"];
+         NSLog(@"NSMutableSet removeObject=%@", mutableSet);
+         
+         // NSMutableSet unionSet
+         NSMutableSet *mutableSet2 = [NSMutableSet setWithObjects:@"ABC", @"DEF", nil];
+         NSMutableSet *mutableSet3 = [NSMutableSet setWithObjects:@"GHI", @"DEF", nil];
+         [mutableSet2 unionSet:mutableSet3];
+         NSLog(@"NSMutableSet unionSet=%@", mutableSet2);
+         
+         // NSMutableSet minusSet
+         NSMutableSet *mutableSet4 = [NSMutableSet setWithObjects:@"ABC", @"DEF", nil];
+         NSMutableSet *mutableSet5 = [NSMutableSet setWithObjects:@"GHI", @"DEF", nil];
+         [mutableSet4 minusSet:mutableSet5];
+         NSLog(@"NSMutableSet minusSet=%@", mutableSet4);
+         
+         // NSMutableSet minusSet
+         NSMutableSet *mutableSet6 = [NSMutableSet setWithObjects:@"ABC", @"DEF", nil];
+         NSMutableSet *mutableSet7 = [NSMutableSet setWithObjects:@"GHI", @"DEF", nil];
+         [mutableSet6 intersectSet:mutableSet7];
+         NSLog(@"NSMutableSet minusSet=%@", mutableSet6);
+     }
+    
+    @autoreleasepool {
+        /***************************************************************************
+         *  value type      | NSNumber init             | NSNumber get value
+         * -------------------------------------------------------------------------
+         *  BOOL            | numberWithBool            | boolValue
+         *  char            | numberWithChar            | charValue
+         *  double          | numberWithDouble          | doubleValue
+         *  float           | numberWithFloat           | floatValue
+         *  int             | numberWithInt             | intValue
+         *  long            | numberWithLong            | longValue
+         *  NSInteger       | numberWithInteger         | IntegerValue
+         *  NSUInteger      | numberWithUnsignedInteger | unsignedIntegerValue
+         *  short           | numberWithShort           | shortValue
+         ***************************************************************************/
+        
+        // NSNumber numberWithBool, numberWithInteger
+        NSNumber *numberWithBool = [NSNumber numberWithBool:false];
+        NSNumber *numberWithInteger = [NSNumber numberWithInteger:123];
+        NSLog(@"NSNumber numberWithBool=%d", [numberWithBool boolValue]);
+        NSLog(@"NSNumber numberWithInteger=%ld", [numberWithInteger integerValue]);
+    }
 
     system("PAUSE");
     return 0;

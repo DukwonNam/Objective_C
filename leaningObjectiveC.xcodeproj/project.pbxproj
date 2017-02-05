@@ -20,6 +20,8 @@
 		17A5437B1DDD635100518D38 /* calculateCalorie.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437A1DDD635100518D38 /* calculateCalorie.m */; };
 		17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5437C1DDD636100518D38 /* NSObjects_test.m */; };
 		17A5C4571DFE24BD00C6FE8D /* Lunch.m in Sources */ = {isa = PBXBuildFile; fileRef = 17A5C4561DFE24BD00C6FE8D /* Lunch.m */; };
+		17AE81631E46D148007EECFB /* MyTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE81621E46D148007EECFB /* MyTimer.m */; };
+		17AE81651E46E750007EECFB /* MyTimer_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AE81641E46E750007EECFB /* MyTimer_test.m */; };
 		17AFCE431E00CB4900938BB3 /* Car.m in Sources */ = {isa = PBXBuildFile; fileRef = 17AFCE421E00CB4900938BB3 /* Car.m */; };
 		17C2907E1DF0F62B00E41E4E /* Animal.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C2907D1DF0F62B00E41E4E /* Animal.m */; };
 		17C290801DF0F6EB00E41E4E /* Animal_test.m in Sources */ = {isa = PBXBuildFile; fileRef = 17C2907F1DF0F6EB00E41E4E /* Animal_test.m */; };
@@ -59,6 +61,9 @@
 		17A5437C1DDD636100518D38 /* NSObjects_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NSObjects_test.m; sourceTree = "<group>"; };
 		17A5C4551DFE230100C6FE8D /* Lunch.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lunch.h; sourceTree = "<group>"; };
 		17A5C4561DFE24BD00C6FE8D /* Lunch.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Lunch.m; sourceTree = "<group>"; };
+		17AE81611E46CF72007EECFB /* MyTimer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyTimer.h; sourceTree = "<group>"; };
+		17AE81621E46D148007EECFB /* MyTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTimer.m; sourceTree = "<group>"; };
+		17AE81641E46E750007EECFB /* MyTimer_test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTimer_test.m; sourceTree = "<group>"; };
 		17AFCE411E00C84A00938BB3 /* Car.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Car.h; sourceTree = "<group>"; };
 		17AFCE421E00CB4900938BB3 /* Car.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Car.m; sourceTree = "<group>"; };
 		17C2907C1DF0F4C900E41E4E /* Animal.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Animal.h; sourceTree = "<group>"; };
@@ -135,6 +140,7 @@
 		178900801DDC8D22005DBF07 /* leaningObjectiveC */ = {
 			isa = PBXGroup;
 			children = (
+				17AE81601E46CF34007EECFB /* timer */,
 				171327FA1E238A0400D3C861 /* file_io */,
 				171E3A9B1E1E04E2007FA92B /* ruler */,
 				178894FE1E1A0498008A383F /* fruit */,
@@ -157,6 +163,16 @@
 				179CB8851DFF74D2003863C4 /* TestClass.m */,
 			);
 			name = test;
+			sourceTree = "<group>";
+		};
+		17AE81601E46CF34007EECFB /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				17AE81611E46CF72007EECFB /* MyTimer.h */,
+				17AE81621E46D148007EECFB /* MyTimer.m */,
+				17AE81641E46E750007EECFB /* MyTimer_test.m */,
+			);
+			name = timer;
 			sourceTree = "<group>";
 		};
 		17AFCE401E00C7FB00938BB3 /* cars */ = {
@@ -257,10 +273,12 @@
 				179CB8861DFF74D2003863C4 /* TestClass.m in Sources */,
 				17A5437B1DDD635100518D38 /* calculateCalorie.m in Sources */,
 				17C290801DF0F6EB00E41E4E /* Animal_test.m in Sources */,
+				17AE81651E46E750007EECFB /* MyTimer_test.m in Sources */,
 				17C6C4E91DFA31D700B55A12 /* Breakfast.m in Sources */,
 				17A5437D1DDD636100518D38 /* NSObjects_test.m in Sources */,
 				175C900D1E0218DD00681973 /* Car_test.m in Sources */,
 				179E98BC1E075D1D00328A02 /* Pet.m in Sources */,
+				17AE81631E46D148007EECFB /* MyTimer.m in Sources */,
 				17C2907E1DF0F62B00E41E4E /* Animal.m in Sources */,
 				17C6C4F01DFA35D100B55A12 /* Breakfast_test.m in Sources */,
 				178895041E1A08C5008A383F /* Fruit.m in Sources */,
